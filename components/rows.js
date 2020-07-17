@@ -14,7 +14,7 @@ export class Row extends Component {
     let width = widthArr ? sum(widthArr) : 0;
 
     return data ? (
-      <TouchableOpacity activeOpacity={opacityPress} onPress={onRowPress}>
+      <TouchableOpacity delayPressIn={80} activeOpacity={opacityPress} onPress={onRowPress}>
         <View style={[height && { height }, width && { width }, styles.row, style]}>
           {data.map((item, i) => {
             const flex = flexArr && flexArr[i];
